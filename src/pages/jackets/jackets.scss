@@ -1,0 +1,16 @@
+.jackets{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .title{
+        font-size: 5rem;
+        font-weight: 600;
+    }
+
+}

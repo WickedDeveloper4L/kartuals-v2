@@ -10,7 +10,7 @@ export default class Shop extends Component {
           title: 'HATS',
           imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
           id: 1,
-          linkUrl: 'shop/hats',
+          linkUrl: '/hats',
           intro: "check out our Amazing collection of hats for your everyday styles, that's why we are here for !",
           shopSection: 'hats'
         },
@@ -18,7 +18,7 @@ export default class Shop extends Component {
           title: 'JACKETS',
           imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
           id: 2,
-          linkUrl: 'shop/jackets',
+          linkUrl: '/jackets',
           intro: "view our Jacket collection with variety of styles, you can never go wrong with Kartuals!",
           shopSection: 'jackets'
 
@@ -27,7 +27,7 @@ export default class Shop extends Component {
           title: 'SHOES',
           imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
           id: 3,
-          linkUrl: 'shop/shoes',
+          linkUrl: '/shoes',
           intro: "from sport to casuals, from formal to sneakers, we got the sole that holds your shoe tastes!",
           shopSection: 'sneakers'
         },
@@ -36,7 +36,7 @@ export default class Shop extends Component {
           imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
           size: 'large',
           id: 4,
-          linkUrl: 'shop/womens',
+          linkUrl: '/womens',
           intro: "Is there anything like that cute feminine look? check out our vast store now!",
           shopSection: 'womens'
 
@@ -46,7 +46,7 @@ export default class Shop extends Component {
           imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
           size: 'large',
           id: 5,
-          linkUrl: 'shop/mens',
+          linkUrl: '/mens',
           intro: "No long talks needed, Just for MEN!",
           shopSection: 'mens'
 

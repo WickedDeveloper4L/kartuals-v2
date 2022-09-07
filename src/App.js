@@ -3,6 +3,11 @@ import Header from './components/header/Header';
 import {Switch, Route} from 'react-router-dom'
 import Homepage from './pages/hompage/Homepage';
 import Shop from './pages/shop/Shop';
+import Hats from './pages/hats/Hats';
+import Jackets from './pages/jackets/Jackets';
+import Mens from './pages/mens/Mens';
+import Women from './pages/womens/Women';
+import Shoes from './pages/shoes/Shoes';
 
 function App() {
   return (
@@ -11,6 +16,11 @@ function App() {
       <Switch>
       <Route exact path='/' component={Homepage}/>
       <Route path='/shop' component={Shop}/>
+      <Route path='/hats' component={Hats} />
+      <Route path='/jackets' component={Jackets} />
+      <Route path='/mens' component={Mens} />
+      <Route path='/womens' component={Women} />
+      <Route path='/shoes' component={Shoes} />
       </Switch>
     </div>
   );
