@@ -8,6 +8,7 @@ import Jackets from './pages/jackets/Jackets';
 import Mens from './pages/mens/Mens';
 import Women from './pages/womens/Women';
 import Shoes from './pages/shoes/Shoes';
+import UserAuth from './pages/userAuthentication/UserAuth';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Header/>
       <Switch>
       <Route exact path='/' component={Homepage}/>
+      <Route path='/userauth' component={UserAuth} />
       <Route path='/shop' component={Shop}/>
       <Route path='/hats' component={Hats} />
       <Route path='/jackets' component={Jackets} />

@@ -23,6 +23,7 @@ const Header = () => {
     <div className='links'>
         <Link className="header_links" to='/shop'>SHOP</Link>
         <Link className="header_links" to='/contact'>CONTACT</Link>
+        <Link className="header_links" to='/userAuth'>LOG IN</Link>
     </div>
     </div>
   )
