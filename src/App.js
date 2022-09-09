@@ -9,6 +9,8 @@ import Mens from './pages/mens/Mens';
 import Women from './pages/womens/Women';
 import Shoes from './pages/shoes/Shoes';
 import UserAuth from './pages/userAuthentication/UserAuth';
+import SignUp from './components/signUp/SignUp';
+import SignIn from './components/signIn/SignIn';
 
 function App() {
   return (
@@ -16,13 +18,14 @@ function App() {
       <Header/>
       <Switch>
       <Route exact path='/' component={Homepage}/>
-      <Route path='/userauth' component={UserAuth} />
+      <Route path='/userauth' component={UserAuth}/>
       <Route path='/shop' component={Shop}/>
       <Route path='/hats' component={Hats} />
-      <Route path='/jackets' component={Jackets} />
-      <Route path='/mens' component={Mens} />
+      <Route path='/jackets' component={Jackets}/>
+      <Route path='/mens' component={Mens}/>
       <Route path='/womens' component={Women} />
       <Route path='/shoes' component={Shoes} />
+      <Route path='/signup' component={SignUp} />
       </Switch>
     </div>
   );

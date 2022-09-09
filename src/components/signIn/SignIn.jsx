@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import CustomButton from '../custom-button/CustomButton';
 import FormInput from '../form-input/FormInput';
 import './signIn.scss'
+import { Link } from 'react-router-dom';
+
 
 export default class SignIn extends Component {
 
@@ -30,7 +32,7 @@ export default class SignIn extends Component {
     const {email, password} = this.state
     return (
       <div className='sign-in'>
-      <h2>I already have an account</h2>
+      <h2 className='title'>I already have an account</h2>
       <span>please input your email and password</span>
       <form onSubmit={this.handleSubmit}>
         <FormInput 
@@ -54,6 +56,9 @@ export default class SignIn extends Component {
         <CustomButton type='buton' isGoogleSignIn>GOOGLE</CustomButton>
         </div>
       </form>
+        <Link to='/signup' className='signup'>
+            <h3>Sign Up - Create an Account here.</h3>
+        </Link>
       </div>
     )
   }

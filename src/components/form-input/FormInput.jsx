@@ -4,8 +4,8 @@ import './form-input.scss'
 const FormInput = ({handleChange, label, ...otherProps}) => {
   return (
     <div className='group'>
-        <input onChange={handleChange} {...otherProps} className="form-input"/>
         <label className='label'>{label}</label>
+        <input onChange={handleChange} {...otherProps} className="form-input"/>
     </div>
   )
 }
