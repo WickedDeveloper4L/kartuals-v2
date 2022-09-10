@@ -3,6 +3,7 @@ import CustomButton from '../custom-button/CustomButton';
 import FormInput from '../form-input/FormInput';
 import './signIn.scss'
 import { Link } from 'react-router-dom';
+import { signInWithGoogle } from '../firebase/firebase.utils';
 
 
 export default class SignIn extends Component {
@@ -53,7 +54,7 @@ export default class SignIn extends Component {
         />
         <div className='buttons'>
         <CustomButton type='submit'>SIGN IN</CustomButton>
-        <CustomButton type='buton' isGoogleSignIn>GOOGLE</CustomButton>
+        <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn>GOOGLE</CustomButton>
         </div>
       </form>
         <Link to='/signup' className='signup'>

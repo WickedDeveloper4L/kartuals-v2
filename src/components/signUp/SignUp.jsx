@@ -3,13 +3,14 @@ import FormInput from '../form-input/FormInput';
 import CustomButton from '../custom-button/CustomButton';
 import './signUp.scss'
 import { Link } from 'react-router-dom';
+import { auth, createUserProfileDocument} from '../firebase/firebase.utils';
 
 export default class SignUp extends Component {
 
     constructor(props) {
         super(props);
         this.state ={
-            userName: '',
+            displayName: '',
             email: '',
             password: '',
             confirmPassword: ''
@@ -18,11 +19,28 @@ export default class SignUp extends Component {
 
     handleSubmit = async event =>{
         event.preventDefault();
+
         const {displayName, email, password, confirmPassword} = this.state;
 
         if(password !== confirmPassword){
             alert('Passwords must match!!');
             return;
+        }
+
+        try {
+            const {user} = await auth.createUserWithEmailAndPassword(email, password);
+
+            await createUserProfileDocument(user, {displayName});
+
+            this.setState({
+                displayName: '',
+                email: '',
+                password: '',
+                confirmPassword: ''
+            })
+
+        } catch (error) {
+            console.error(error)
         }
     }
 
@@ -37,7 +55,7 @@ export default class SignUp extends Component {
     
   render() {
 
-    const {userName, email, password, confirmPassword} = this.state
+    const {displayName, email, password, confirmPassword} = this.state
     return (
       <div className='sign-up'>
         <h2 className='title'>I dont have an Account</h2>
@@ -45,8 +63,8 @@ export default class SignUp extends Component {
         <FormInput
             type='text'
             required
-            name='userName'
-            value={userName}
+            name='displayName'
+            value={displayName}
             label='Username'
             onChange={this.handleChange}
         />
