@@ -7,7 +7,7 @@ export default class Jackets extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            shop: SHOP_DATA
+          shop: SHOP_DATA
         }
     }
     
