@@ -58,7 +58,7 @@ class App extends Component {
       <Route path='/mens' component={Mens}/>
       <Route path='/womens' component={Women} />
       <Route path='/shoes' component={Shoes} />
-      <Route path='/signup' component={SignUp} />
+      <Route exact path='/signup' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignUp/>)} />
       </Switch>
     </div>
     )
