@@ -15,7 +15,7 @@ export default class Hats extends Component {
     return (
       <div className='hats'>
       <h3 className="title">HATS</h3>
-      {this.state.shop[0].items.map(({id, ...otherProps}) => <Item key={id} {...otherProps}/>)}
+      {this.state.shop[0].items.map((item) => <Item key={item.id} item={item}/>)}
       </div>
     )
   }

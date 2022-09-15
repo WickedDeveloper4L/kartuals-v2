@@ -2,10 +2,10 @@
     width: 22%;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 400px;
     align-items: center;
-    padding: 1rem;
-    border: 2px solid black;
+    padding: 10px;
+    border: 1px solid black;
     border-radius: 5px;
     &:hover{
       border-color: rgba(255, 68, 0, 0.93);
@@ -25,6 +25,7 @@
       display: flex;
       justify-content: space-between;
       font-size: 18px;
+      padding-bottom: 30px;
   
       .name {
         width: 90%;
@@ -35,5 +36,6 @@
         width: 10%;
       }
     }
-  }
+
+}
   
