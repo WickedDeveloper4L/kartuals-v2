@@ -1,0 +1,23 @@
+.checkout-page{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+
+    .title{
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .checkout-items{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: 90vw;
+        padding: 1rem;
+        margin: auto;
+
+    }
+
+}

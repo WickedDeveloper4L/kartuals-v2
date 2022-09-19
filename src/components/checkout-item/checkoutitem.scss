@@ -1,0 +1,27 @@
+.checkout-item{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid black;
+    .image-container{
+        
+        img{
+            width: 100%;
+            height: 240px;
+        }
+    }
+
+    .description,
+    .price,
+    .quantity{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .controls{
+        display: flex;
+        justify-content: space-between;
+        padding: 3px 10px;
+    }
+}

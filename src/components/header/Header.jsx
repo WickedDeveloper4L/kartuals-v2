@@ -6,6 +6,9 @@ import { connect } from 'react-redux'
 import CartDropdown from '../cart-dropdown/CartDropdown'
 import CartIcon from '../cart-icon/CartIcon'
 import {ReactComponent as Logo} from '../../assets/logo.svg'
+import { createStructuredSelector } from 'reselect'
+import { selectCurrentUser } from '../../redux/user/user.selectors'
+import { selectCartHidden } from '../../redux/cart/cart.selectors'
 
 const Header = ({currentUser, hidden}) => {
   return (
@@ -32,9 +35,9 @@ const Header = ({currentUser, hidden}) => {
   
 }
 
-const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) =>({
-  currentUser,
-  hidden
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
 })
 
 export default connect(mapStateToProps)(Header)

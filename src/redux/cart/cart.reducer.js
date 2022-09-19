@@ -1,6 +1,7 @@
 import { cartActionType } from "./cart.type";
 import { addItemToCart } from "./cart.utils";
 
+
 const INITIAL_STATE = {
     hidden: true,
     cartItems: []
@@ -17,6 +18,11 @@ const INITIAL_STATE = {
             return{
                 ...state,
                 cartItems: addItemToCart(state.cartItems, action.payload)
+            }
+        case cartActionType.CLEAR_CART_ITEM:
+            return{
+                ...state,
+                cartItems: state.cartItems.filter(cartItem => cartItem.id !== action.payload.id)
             }
             default:
                 return state;
